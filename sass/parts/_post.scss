@@ -1,6 +1,8 @@
 .post{
 	.entry-content{
-		margin-left: 230px;
+		@media screen and (min-width: 800px){
+			margin-left: 230px;
+		}
 		min-height: 180px;
 		@media screen and (max-width: 800px){
 			margin-left: 0;
