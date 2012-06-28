@@ -3,3 +3,8 @@
 @import "base";
 @import "parts";
 @import "plugins";
+
+hr.spacer {
+  visibility: hidden;
+  height: 32px;
+}

@@ -1,17 +1,18 @@
 .post{
-	h1.title, .entry-content{
-		margin-left: 200px;
+	.entry-content{
+		margin-left: 230px;
+		min-height: 180px;
 		@media screen and (max-width: 800px){
 			margin-left: 0;
 		}
 	}
 	.meta{
 		position: absolute;
-		top: 85px;
+		top: 75px;
 		line-height: 2;
 		font-size: 0.9em;
 		color: $color-gray02;
-		width: 170px;
+		width: 200px;
 		@media screen and (max-width: 800px){
 			margin-top: 15px;
 			position: static;
@@ -21,7 +22,7 @@
 			@include link-colors($color-gray02, $color-gray01);
 			@include transition(0.3s);
 		}
-		.date, .tags, .comments{
+		.author, .date, .tags, .comments, .more-link{
 			padding-left: 30px;
 			position: relative;
 			&:before{
@@ -36,8 +37,5 @@
 				margin-right: 30px;
 			}
 		}
-		.date:before{content: "\f073";}
-		.tags:before{content: "\f02c";}
-		.comments:before{content: "\f075";}
 	}
 }
