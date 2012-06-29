@@ -2,8 +2,8 @@
 	.entry-content{
 		@media screen and (min-width: 800px){
 			margin-left: 230px;
+			min-height: 190px;
 		}
-		min-height: 180px;
 		@media screen and (max-width: 800px){
 			margin-left: 0;
 		}
@@ -13,7 +13,7 @@
 		top: 75px;
 		line-height: 2;
 		font-size: 0.9em;
-		color: $color-gray02;
+		color: $color-gray01;
 		width: 200px;
 		@media screen and (max-width: 800px){
 			margin-top: 15px;
@@ -21,14 +21,15 @@
 			width: auto;
 		}
 		a{
-			@include link-colors($color-gray02, $color-gray01);
+			@include link-colors($color-gray01, $color-gray00);
 			@include transition(0.3s);
+			border-bottom: 1px dotted $color-gray03;
 		}
-		.author, .date, .tags, .comments, .more-link{
+		.author, .date, .tags, .comments, .continue-reading{
 			padding-left: 30px;
 			position: relative;
 			&:before{
-				color: $color-gray03;
+				color: $color-gray02;
 				font: 1.3em $font-icon;
 				line-height: 1.6em;
 				position: absolute;
@@ -37,6 +38,11 @@
 			@media screen and (max-width: 800px){
 				@include inline-block;
 				margin-right: 30px;
+			}
+		}
+		.continue-reading{
+			@media screen and (min-width: 800px){
+				margin-top: 30px;
 			}
 		}
 	}
