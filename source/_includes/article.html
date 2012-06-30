@@ -15,7 +15,7 @@
 	<div class="date icon-calendar">{% include post/date.html %}{{ time }}</div>
 	<div class="tags icon-tags">{% include post/categories.html %}</div>
 	{% if site.disqus_short_name and site.disqus_show_comment_count == true %}
-		<span class="comments icon-comments"><a href="{{ root_url }}{{ post.url }}{{ page.url }}#disqus_thread">Comments and Reactions</a></span>
+		<span class="comments icon-comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% else %}{{ root_url }}{{ page.url }}{% endif %}#disqus_thread">Comments and Reactions</a></span>
 	{% endif %}
 	{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
 	{% if index and excerpted == 'true' %}
